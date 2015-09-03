@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EB8FBC7F1B945BE3007ED423 /* lab_week01.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB8FBC7E1B945BE3007ED423 /* lab_week01.1 */; };
 		EB8FBC861B945BEE007ED423 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8FBC851B945BEE007ED423 /* OpenGL.framework */; };
-		EBE9AE691B97F4E10020D0C4 /* pp1.c in Sources */ = {isa = PBXBuildFile; fileRef = EBE9AE611B9742120020D0C4 /* pp1.c */; };
+		EBC4FCFA1B980475008DB16B /* pp1.c in Sources */ = {isa = PBXBuildFile; fileRef = EBE9AE611B9742120020D0C4 /* pp1.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -125,7 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBE9AE691B97F4E10020D0C4 /* pp1.c in Sources */,
+				EBC4FCFA1B980475008DB16B /* pp1.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
