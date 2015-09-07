@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>97AC143D-C854-4937-8D45-8CBAF67E99BD</string>
+	<string>FC854328-B3E5-4A9F-A27D-2918EE7BEA84</string>
 	<key>IDESourceControlProjectName</key>
 	<string>lab_week01</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -17,6 +17,8 @@
 	<string>lab_week01/lab_week01.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>246F7953-FAE5-4211-B011-01CC0D9C9407</key>
+		<string>../../lab_week02</string>
 		<key>44906AD5-9F68-45CB-9F6D-EA172FED42E4</key>
 		<string>../../..</string>
 	</dict>
@@ -35,6 +37,14 @@
 			<string>44906AD5-9F68-45CB-9F6D-EA172FED42E4</string>
 			<key>IDESourceControlWCCName</key>
 			<string>lab</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>246F7953-FAE5-4211-B011-01CC0D9C9407</string>
+			<key>IDESourceControlWCCName</key>
+			<string>lab_week02</string>
 		</dict>
 	</array>
 </dict>

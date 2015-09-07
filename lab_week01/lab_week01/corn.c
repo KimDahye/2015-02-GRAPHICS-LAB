@@ -13,14 +13,55 @@
 
 #define GL_PI 3.1415f
 
+#define FALSE 0
+#define TRUE 1
+
 static GLfloat xRot = 0.0f;
 static GLfloat yRot = 0.0f;
+
+int iCull = FALSE;
+int iOutline = FALSE;
+int iDepth = FALSE;
+
+void ProcessMenu(int value) //add
+{
+    switch(value)
+    {
+        case 1:
+            iDepth = !iDepth;
+            break;
+        case 2:
+            iCull = !iCull;
+            break;
+        case 3:
+            iOutline = !iOutline;
+            break;
+        default :
+            break;
+    }
+    glutPostRedisplay();
+}
 
 void RenderScene()
 {
 	GLfloat x,y,angle;
 	int iPivot = 1; // add
-	glClear(GL_COLOR_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+    if(iCull)
+        glEnable(GL_CULL_FACE);
+    else
+        glDisable(GL_CULL_FACE);
+    
+    if(iDepth)
+        glEnable(GL_DEPTH_TEST);
+    else
+        glDisable(GL_DEPTH_TEST);
+    if(iOutline)
+        glPolygonMode(GL_BACK,GL_LINE);
+    else
+        glPolygonMode(GL_BACK,GL_FILL);
+    
 	glPushMatrix();
 	glRotatef(xRot, 1.0f, 0.0f, 0.0f);
 	glRotatef(yRot, 0.0f, 1.0f, 0.0f);
@@ -82,9 +123,9 @@ void KeyControl(int key, int x, int y)
 void ChangeSize(int w, int h)
 {
     GLfloat nRange = 100.0f;
+    glViewport(0, 0, w, h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    glViewport(0, 0, w ,h );
     if(w<=h)
         glOrtho(-nRange,nRange,-
                 nRange*h/w,nRange*h/w,-nRange, nRange);
@@ -98,10 +139,18 @@ void ChangeSize(int w, int h)
 int main(int argc, char* argv[])
 {
     glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-	glutInitWindowPosition(0, 0);
-	glutInitWindowSize(1500, 1000);
+	glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGB|GLUT_DEPTH);
+	
+	glutInitWindowSize(512, 512);
+    glutInitWindowPosition(0, 0);
 	glutCreateWindow("SpringVertex");
+    
+    glutCreateMenu(ProcessMenu); // add - Create the Menu
+    glutAddMenuEntry("깊이 테스트",1);
+    glutAddMenuEntry("은면제거", 2);
+    glutAddMenuEntry("뒷면 라인 그리기",3);
+    glutAttachMenu(GLUT_RIGHT_BUTTON);
+    
     glutReshapeFunc(ChangeSize);
     glutSpecialFunc(KeyControl);
 	glutDisplayFunc(RenderScene);

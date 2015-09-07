@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB7CC6C71B9D8F8100B7D7F8 /* atom.c in Sources */ = {isa = PBXBuildFile; fileRef = EB7CC6A81B9D8AE300B7D7F8 /* atom.c */; };
 		EB8FBC7F1B945BE3007ED423 /* lab_week01.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB8FBC7E1B945BE3007ED423 /* lab_week01.1 */; };
 		EB8FBC861B945BEE007ED423 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8FBC851B945BEE007ED423 /* OpenGL.framework */; };
-		EBC4FCFA1B980475008DB16B /* pp1.c in Sources */ = {isa = PBXBuildFile; fileRef = EBE9AE611B9742120020D0C4 /* pp1.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EB7CC6A21B9D84CB00B7D7F8 /* cullingCorn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cullingCorn.c; sourceTree = "<group>"; };
+		EB7CC6A81B9D8AE300B7D7F8 /* atom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = atom.c; sourceTree = "<group>"; };
+		EB7CC6AA1B9D8CEE00B7D7F8 /* pp2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pp2.c; sourceTree = "<group>"; };
 		EB8FBC791B945BE3007ED423 /* lab_week01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab_week01; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8FBC7E1B945BE3007ED423 /* lab_week01.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = lab_week01.1; sourceTree = "<group>"; };
 		EB8FBC851B945BEE007ED423 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -70,6 +73,9 @@
 				EB8FBC7E1B945BE3007ED423 /* lab_week01.1 */,
 				EB8FBC871B945D1E007ED423 /* corn.c */,
 				EBE9AE611B9742120020D0C4 /* pp1.c */,
+				EB7CC6A21B9D84CB00B7D7F8 /* cullingCorn.c */,
+				EB7CC6A81B9D8AE300B7D7F8 /* atom.c */,
+				EB7CC6AA1B9D8CEE00B7D7F8 /* pp2.c */,
 			);
 			path = lab_week01;
 			sourceTree = "<group>";
@@ -125,7 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBC4FCFA1B980475008DB16B /* pp1.c in Sources */,
+				EB7CC6C71B9D8F8100B7D7F8 /* atom.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
