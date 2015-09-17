@@ -13,8 +13,6 @@
 
 #define GL_PI 3.1415f
 
-//GLfloat lightPos2[] = { 0.0f, 0.0f, -100.0f, 1.0f };
-
 void SetupRC()
 {
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f );
@@ -46,11 +44,6 @@ void SetupRC()
     glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, diff);
     glEnable(GL_LIGHT0);
-    
-    glLightfv(GL_LIGHT1, GL_AMBIENT, amb);
-    glLightfv(GL_LIGHT1, GL_DIFFUSE, diff);
-    glEnable(GL_LIGHT1);
-    
     
     glEnable(GL_COLOR_MATERIAL);
     glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
@@ -107,8 +100,6 @@ void RenderScene() // add – draw 3 sphere
     glColor3ub(50,50,50);
     glutSolidSphere(6.0f,15,15);
 
-    GLfloat lightPos[] = { 90.0f, 0.0f, 0.0f, 1.0f };
-    glLightfv(GL_LIGHT1,GL_POSITION,lightPos);
     
     fElect1 += 5.0f;
     if(fElect1 > 360.0f)
