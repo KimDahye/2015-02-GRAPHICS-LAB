@@ -13,12 +13,48 @@
 
 #define GL_PI 3.1415f
 
+//GLfloat lightPos2[] = { 0.0f, 0.0f, -100.0f, 1.0f };
+
 void SetupRC()
 {
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f );
     glEnable(GL_DEPTH_TEST);  //add
     glFrontFace(GL_CCW);      //add
     glEnable(GL_CULL_FACE);   //add
+    
+    glEnable(GL_LIGHTING);
+    
+    GLfloat amb[] = {0.3f,0.3f,0.3f};
+    
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, amb);
+	glEnable(GL_COLOR_MATERIAL);
+    
+	glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
+	
+    
+    
+
+    GLfloat diff[] = { 0.7f,0.7f,0.7f};
+    
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_CULL_FACE);  // ≥ª∫Œ ∆˙∏Æ∞Ô ø¨ªÍ off (backface culling)
+    glFrontFace(GL_CCW);
+    
+    glEnable(GL_LIGHTING);
+    
+    //glLightModelfv(GL_LIGHT_MODEL_AMBIENT, amb);
+    glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, diff);
+    glEnable(GL_LIGHT0);
+    
+    glLightfv(GL_LIGHT1, GL_AMBIENT, amb);
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, diff);
+    glEnable(GL_LIGHT1);
+    
+    
+    glEnable(GL_COLOR_MATERIAL);
+    glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
+    
 }
 void TimerFunc(int value)
 {
@@ -29,6 +65,8 @@ void TimerFunc(int value)
 void ChangeSize(int w, int h)
 {
     GLfloat nRange = 100.0f;
+    GLfloat lightPos[] = { 0.0f, 0.0f, -100.0f, 1.0f };
+    
     glViewport(0, 0, w, h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -42,6 +80,8 @@ void ChangeSize(int w, int h)
                  nRange*2.0f, nRange*2.0f);  //add
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
+    
+    glLightfv(GL_LIGHT0,GL_POSITION,lightPos);
 }
 
 void RenderScene() // add – draw 3 sphere
@@ -67,6 +107,8 @@ void RenderScene() // add – draw 3 sphere
     glColor3ub(50,50,50);
     glutSolidSphere(6.0f,15,15);
 
+    GLfloat lightPos[] = { 90.0f, 0.0f, 0.0f, 1.0f };
+    glLightfv(GL_LIGHT1,GL_POSITION,lightPos);
     
     fElect1 += 5.0f;
     if(fElect1 > 360.0f)

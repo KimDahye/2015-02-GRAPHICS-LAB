@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB7CC6C71B9D8F8100B7D7F8 /* atom.c in Sources */ = {isa = PBXBuildFile; fileRef = EB7CC6A81B9D8AE300B7D7F8 /* atom.c */; };
+		EB0FEC901BAAD731000D940C /* gltools.h in Sources */ = {isa = PBXBuildFile; fileRef = EB0FEC8D1BAAD72A000D940C /* gltools.h */; };
+		EB0FEC941BAADB14000D940C /* pp2.c in Sources */ = {isa = PBXBuildFile; fileRef = EB7CC6AA1B9D8CEE00B7D7F8 /* pp2.c */; };
 		EB8FBC7F1B945BE3007ED423 /* lab_week01.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB8FBC7E1B945BE3007ED423 /* lab_week01.1 */; };
 		EB8FBC861B945BEE007ED423 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8FBC851B945BEE007ED423 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EB0FEC8D1BAAD72A000D940C /* gltools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gltools.h; path = ../../../../../../gltools.h; sourceTree = "<group>"; };
+		EB0FEC911BAAD8E1000D940C /* drawjet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = drawjet.c; sourceTree = "<group>"; };
 		EB7CC6A21B9D84CB00B7D7F8 /* cullingCorn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cullingCorn.c; sourceTree = "<group>"; };
 		EB7CC6A81B9D8AE300B7D7F8 /* atom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = atom.c; sourceTree = "<group>"; };
 		EB7CC6AA1B9D8CEE00B7D7F8 /* pp2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pp2.c; sourceTree = "<group>"; };
@@ -69,6 +72,8 @@
 		EB8FBC7B1B945BE3007ED423 /* lab_week01 */ = {
 			isa = PBXGroup;
 			children = (
+				EB0FEC8D1BAAD72A000D940C /* gltools.h */,
+				EB0FEC911BAAD8E1000D940C /* drawjet.c */,
 				EBE9AE631B9742DF0020D0C4 /* spring.c */,
 				EB8FBC7E1B945BE3007ED423 /* lab_week01.1 */,
 				EB8FBC871B945D1E007ED423 /* corn.c */,
@@ -131,7 +136,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB7CC6C71B9D8F8100B7D7F8 /* atom.c in Sources */,
+				EB0FEC941BAADB14000D940C /* pp2.c in Sources */,
+				EB0FEC901BAAD731000D940C /* gltools.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
