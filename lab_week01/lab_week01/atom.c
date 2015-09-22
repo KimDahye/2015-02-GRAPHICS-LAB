@@ -3,7 +3,7 @@
 //  lab_week01
 //
 //  Created by JoJo on 2015. 9. 7..
-//  Copyright (c) 2015년 NHN NEXT. All rights reserved.
+//  Copyright (c) 2015년 JoJo. All rights reserved.
 //
 
 #include <stdio.h>

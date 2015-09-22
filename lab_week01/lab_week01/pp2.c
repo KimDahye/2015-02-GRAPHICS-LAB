@@ -1,9 +1,9 @@
 //
-//  atom.c
+//  pp2.c
 //  lab_week01
 //
 //  Created by JoJo on 2015. 9. 7..
-//  Copyright (c) 2015년 NHN NEXT. All rights reserved.
+//  Copyright (c) 2015년 JoJo. All rights reserved.
 //
 
 #include <stdio.h>
@@ -32,7 +32,8 @@ void SetupRC()
     
     
 
-    GLfloat diff[] = { 0.7f,0.7f,0.7f};
+    GLfloat diff[] = { 0.9f,0.9f,0.9f};
+//    GLfloat diff2[] = { 0.5f,0.0f,0.0f};
     
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);  // ≥ª∫Œ ∆˙∏Æ∞Ô ø¨ªÍ off (backface culling)
@@ -44,6 +45,10 @@ void SetupRC()
     glLightfv(GL_LIGHT0, GL_AMBIENT, amb);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, diff);
     glEnable(GL_LIGHT0);
+    
+//    glLightfv(GL_LIGHT1, GL_AMBIENT, amb);
+//    glLightfv(GL_LIGHT1, GL_DIFFUSE, diff2);
+//    glEnable(GL_LIGHT1);
     
     glEnable(GL_COLOR_MATERIAL);
     glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
@@ -99,6 +104,9 @@ void RenderScene() // add – draw 3 sphere
     glTranslatef(-20.0f,0.0f,0.0f);
     glColor3ub(50,50,50);
     glutSolidSphere(6.0f,15,15);
+    
+//    GLfloat lightPos2[] = { 90.0f, 0.0f, 0.0f, 1.0f };
+//    glLightfv(GL_LIGHT1,GL_POSITION,lightPos2);
 
     
     fElect1 += 5.0f;
