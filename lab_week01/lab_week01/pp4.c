@@ -21,7 +21,7 @@ GLfloat amb [] = { 0.3f, 0.3f, 0.3f, 1.0f};
 GLfloat dif [] = { 0.8f, 0.8f, 0.8f, 1.0f};
 GLfloat	lightPos[] = { -50.0f, 50.0f, 100.0f, 1.0f};
 
-GLuint tex[2];
+GLuint tex[3];
 
 void gltDrawSphere(GLfloat fRadius, GLint iSlices, GLint iStacks)
 {
@@ -93,14 +93,19 @@ void RenderScene()
 	glTranslatef(0.0f,0.0f, zDistance);
     
     
-    tex[0] = SOIL_load_OGL_texture("/Users/JoJo/texture.bmp", SOIL_LOAD_AUTO,SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT);
+    tex[0] = SOIL_load_OGL_texture("/Users/JoJo/Sun.bmp", SOIL_LOAD_AUTO,SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT);
+    tex[1] = SOIL_load_OGL_texture("/Users/JoJo/texture.bmp", SOIL_LOAD_AUTO,SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT);
+    tex[2] = SOIL_load_OGL_texture("/Users/JoJo/moon.bmp", SOIL_LOAD_AUTO,SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT);
     
-    glBindTexture(GL_TEXTURE_2D, tex[0]);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    for (int i=0; i<3; i++) {
+        glBindTexture(GL_TEXTURE_2D, tex[i]);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
         
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    }
+
     
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_DEPTH_TEST);
@@ -114,7 +119,22 @@ void RenderScene()
     glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE,GL_MODULATE );
     glBindTexture(GL_TEXTURE_2D, tex[0]);
     glColor3f(1.0f,1.0f,1.0f);
-    gltDrawSphere(10, 41, 41);
+    gltDrawSphere(5, 41, 41);
+    
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE,GL_MODULATE );
+    glBindTexture(GL_TEXTURE_2D, tex[1]);
+    glTranslatef(25.0f,0.0f,0.0f);
+    glColor3f(1.0f,1.0f,1.0f);
+    gltDrawSphere(3, 41, 41);
+    glPushMatrix();
+    
+    glPopMatrix();
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE,GL_MODULATE );
+    glBindTexture(GL_TEXTURE_2D, tex[2]);
+    glTranslatef(-10.0f,0.0f,0.0f);
+    glColor3f(1.0f,1.0f,1.0f);
+    gltDrawSphere(2, 41, 41);
+    
     glPopMatrix();
 
     
@@ -166,7 +186,7 @@ int main(int argc, char* argv[])
 {
     glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-	glutInitWindowSize(500,500);
+	glutInitWindowSize(800,500);
 	glutInitWindowPosition(0,0);
 	glutCreateWindow("2D texture");
 	glutSpecialFunc(KeyControl);

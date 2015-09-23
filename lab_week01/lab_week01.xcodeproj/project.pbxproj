@@ -33,7 +33,6 @@
 /* Begin PBXFileReference section */
 		EB0F090C1BB2A4040026D7CB /* texture.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = texture.c; sourceTree = "<group>"; };
 		EB0F090E1BB2A7700026D7CB /* pp4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pp4.c; sourceTree = "<group>"; };
-		EB0F09101BB2A9360026D7CB /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = "<group>"; };
 		EB0FEC8D1BAAD72A000D940C /* gltools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gltools.h; path = ../../../../../../gltools.h; sourceTree = "<group>"; };
 		EB0FEC911BAAD8E1000D940C /* drawjet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = drawjet.c; sourceTree = "<group>"; };
 		EB0FEC971BAAE99F000D940C /* multiTexture.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = multiTexture.c; sourceTree = "<group>"; };
@@ -137,7 +136,6 @@
 				EB0FEC971BAAE99F000D940C /* multiTexture.c */,
 				EBAB486F1BB17ABE008ACE93 /* pp3.c */,
 				EB0F090E1BB2A7700026D7CB /* pp4.c */,
-				EB0F09101BB2A9360026D7CB /* Sphere.cpp */,
 			);
 			path = lab_week01;
 			sourceTree = "<group>";
