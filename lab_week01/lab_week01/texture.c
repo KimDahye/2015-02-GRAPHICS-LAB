@@ -9,8 +9,8 @@
 #include <stdio.h>
 #include <OpenGL/OpenGL.h>
 #include <GLUT/GLUT.h>
-#include <GLUT/glaux.h>
 #include <math.h>
+#include "SOIL.h"
 
 #define GL_PI 3.14159f
 static GLfloat xRot = 0.0f;
@@ -21,8 +21,7 @@ GLfloat amb [] = { 0.3f, 0.3f, 0.3f, 1.0f};
 GLfloat dif [] = { 0.8f, 0.8f, 0.8f, 1.0f};
 GLfloat	lightPos[] = { -50.0f, 50.0f, 100.0f, 1.0f};
 
-AUX_RGBImageRec * texRec;
-GLuint texID;
+GLuint tex;
 
 void SetupRC()
 {
@@ -41,9 +40,16 @@ void RenderScene()
     glRotatef(yRot, 0.0f, 1.0f, 0.0f);
 	glTranslatef(0.0f,0.0f, zDistance);
     
-	texRec = auxDIBImageLoad("texture.bmp");
-	//glGenTextures(1, &texID);
-	//glBindTexture(GL_TEXTURE_2D, texID);
+    //int width, height;
+    //unsigned char* image = SOIL_load_image("/Users/JoJo/texture.bmp", &width, &height, 0, SOIL_LOAD_RGB);
+    
+    // 이렇게 하면 이미지 로드는 됨 ㅠ
+    tex = SOIL_load_OGL_texture("/Users/JoJo/texture.bmp", SOIL_LOAD_AUTO,SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT);
+    if(tex==0)
+        printf("load image failed");
+    
+	//glGenTextures(1, &tex);
+	glBindTexture(GL_TEXTURE_2D, tex);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     
@@ -52,10 +58,10 @@ void RenderScene()
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	
-    //	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR_MIPMAP_LINEAR);
-    //	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
 	
-	glTexImage2D(GL_TEXTURE_2D, 0, 3, texRec->sizeX, texRec->sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, texRec->data);
+	//glTexImage2D(GL_TEXTURE_2D, 0, 3, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
     
     
     
@@ -118,6 +124,7 @@ void ChangeSize(int w, int h)
 
 int main(int argc, char* argv[])
 {
+    glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 	glutInitWindowSize(800,800);
 	glutInitWindowPosition(0,0);
