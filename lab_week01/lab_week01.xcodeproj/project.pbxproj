@@ -14,7 +14,7 @@
 		EB245AB81BB29080001FCB5F /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = EB245AAE1BB29032001FCB5F /* stb_image_aug.c */; };
 		EB245AB91BB29084001FCB5F /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = EB245AA71BB29032001FCB5F /* image_helper.c */; };
 		EB8FBC7F1B945BE3007ED423 /* lab_week01.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB8FBC7E1B945BE3007ED423 /* lab_week01.1 */; };
-		EBAB48751BB1953C008ACE93 /* texture.c in Sources */ = {isa = PBXBuildFile; fileRef = EB0FEC971BAAE99F000D940C /* texture.c */; };
+		EBAB48751BB1953C008ACE93 /* multiTexture.c in Sources */ = {isa = PBXBuildFile; fileRef = EB0FEC971BAAE99F000D940C /* multiTexture.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,9 +31,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EB0F090C1BB2A4040026D7CB /* texture.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = texture.c; sourceTree = "<group>"; };
 		EB0FEC8D1BAAD72A000D940C /* gltools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gltools.h; path = ../../../../../../gltools.h; sourceTree = "<group>"; };
 		EB0FEC911BAAD8E1000D940C /* drawjet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = drawjet.c; sourceTree = "<group>"; };
-		EB0FEC971BAAE99F000D940C /* texture.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = texture.c; sourceTree = "<group>"; };
+		EB0FEC971BAAE99F000D940C /* multiTexture.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = multiTexture.c; sourceTree = "<group>"; };
 		EB245AA51BB29032001FCB5F /* image_DXT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = image_DXT.c; sourceTree = "<group>"; };
 		EB245AA61BB29032001FCB5F /* image_DXT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = image_DXT.h; sourceTree = "<group>"; };
 		EB245AA71BB29032001FCB5F /* image_helper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = image_helper.c; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 		EB8FBC7B1B945BE3007ED423 /* lab_week01 */ = {
 			isa = PBXGroup;
 			children = (
+				EB0F090C1BB2A4040026D7CB /* texture.c */,
 				EB245ABB1BB29DB4001FCB5F /* 2Dtexture (2).cpp */,
 				EB0FEC8D1BAAD72A000D940C /* gltools.h */,
 				EB0FEC911BAAD8E1000D940C /* drawjet.c */,
@@ -132,7 +134,7 @@
 				EB7CC6A21B9D84CB00B7D7F8 /* cullingCorn.c */,
 				EB7CC6A81B9D8AE300B7D7F8 /* atom.c */,
 				EB7CC6AA1B9D8CEE00B7D7F8 /* pp2.c */,
-				EB0FEC971BAAE99F000D940C /* texture.c */,
+				EB0FEC971BAAE99F000D940C /* multiTexture.c */,
 				EBAB486F1BB17ABE008ACE93 /* pp3.c */,
 			);
 			path = lab_week01;
@@ -194,7 +196,7 @@
 				EB245AB71BB2907A001FCB5F /* SOIL.c in Sources */,
 				EB245AB61BB29073001FCB5F /* image_DXT.c in Sources */,
 				EB245AB51BB29048001FCB5F /* SOIL.h in Sources */,
-				EBAB48751BB1953C008ACE93 /* texture.c in Sources */,
+				EBAB48751BB1953C008ACE93 /* multiTexture.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
