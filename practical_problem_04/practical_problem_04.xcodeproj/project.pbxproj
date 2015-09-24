@@ -15,18 +15,24 @@
 		EB439CEF1BB44B1D00E72CE8 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = EB439CE61BB44B1200E72CE8 /* SOIL.c */; };
 		EB439CF01BB44B1F00E72CE8 /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = EB439CE81BB44B1200E72CE8 /* stb_image_aug.c */; };
 		EB439CF11BB44B2400E72CE8 /* SOIL.h in Sources */ = {isa = PBXBuildFile; fileRef = EB439CE71BB44B1200E72CE8 /* SOIL.h */; };
+		EB439D321BB455B300E72CE8 /* earth.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB439D2F1BB4556F00E72CE8 /* earth.bmp */; };
+		EB439D331BB455B300E72CE8 /* moon.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB439D301BB4556F00E72CE8 /* moon.bmp */; };
+		EB439D341BB455B300E72CE8 /* sun.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB439D311BB4556F00E72CE8 /* sun.bmp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EB439CCE1BB44A3000E72CE8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = resources;
+			dstSubfolderSpec = 7;
 			files = (
+				EB439D321BB455B300E72CE8 /* earth.bmp in CopyFiles */,
+				EB439D331BB455B300E72CE8 /* moon.bmp in CopyFiles */,
+				EB439D341BB455B300E72CE8 /* sun.bmp in CopyFiles */,
 				EB439CD61BB44A3000E72CE8 /* practical_problem_04.1 in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -48,6 +54,10 @@
 		EB439CEA1BB44B1200E72CE8 /* stbi_DDS_aug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_aug.h; sourceTree = "<group>"; };
 		EB439CEB1BB44B1200E72CE8 /* stbi_DDS_aug_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_aug_c.h; sourceTree = "<group>"; };
 		EB439CEC1BB44B1200E72CE8 /* test_SOIL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_SOIL.cpp; sourceTree = "<group>"; };
+		EB439D2E1BB4556F00E72CE8 /* donut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = donut.jpg; sourceTree = "<group>"; };
+		EB439D2F1BB4556F00E72CE8 /* earth.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = earth.bmp; sourceTree = "<group>"; };
+		EB439D301BB4556F00E72CE8 /* moon.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = moon.bmp; sourceTree = "<group>"; };
+		EB439D311BB4556F00E72CE8 /* sun.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = sun.bmp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +75,7 @@
 		EB439CC71BB44A3000E72CE8 = {
 			isa = PBXGroup;
 			children = (
+				EB439D2D1BB4556F00E72CE8 /* resources */,
 				EB439CDE1BB44B1200E72CE8 /* src */,
 				EB439CDC1BB44A4E00E72CE8 /* OpenGL.framework */,
 				EB439CD21BB44A3000E72CE8 /* practical_problem_04 */,
@@ -116,6 +127,18 @@
 				EB439CE51BB44B1200E72CE8 /* stb_image-1.16.c */,
 			);
 			path = original;
+			sourceTree = "<group>";
+		};
+		EB439D2D1BB4556F00E72CE8 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB439D2E1BB4556F00E72CE8 /* donut.jpg */,
+				EB439D2F1BB4556F00E72CE8 /* earth.bmp */,
+				EB439D301BB4556F00E72CE8 /* moon.bmp */,
+				EB439D311BB4556F00E72CE8 /* sun.bmp */,
+			);
+			name = resources;
+			path = ../resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +309,7 @@
 				EB439CDB1BB44A3000E72CE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

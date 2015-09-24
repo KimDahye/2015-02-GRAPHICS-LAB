@@ -44,7 +44,7 @@ void RenderScene()
     //unsigned char* image = SOIL_load_image("/Users/JoJo/texture.bmp", &width, &height, 0, SOIL_LOAD_RGB);
     
     // 이렇게 하면 이미지 로드는 됨 ㅠ
-    tex = SOIL_load_OGL_texture("/Users/JoJo/texture.bmp", SOIL_LOAD_AUTO,SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT);
+    tex = SOIL_load_OGL_texture("resources/earth.bmp", SOIL_LOAD_AUTO,SOIL_CREATE_NEW_ID, SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT);
     if(tex==0)
         printf("load image failed");
     

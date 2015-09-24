@@ -15,18 +15,20 @@
 		EB439D1C1BB44DD500E72CE8 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = EB439D131BB44DCD00E72CE8 /* SOIL.c */; };
 		EB439D1D1BB44DD800E72CE8 /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = EB439D151BB44DCD00E72CE8 /* stb_image_aug.c */; };
 		EB439D1E1BB44DDC00E72CE8 /* SOIL.h in Sources */ = {isa = PBXBuildFile; fileRef = EB439D141BB44DCD00E72CE8 /* SOIL.h */; };
+		EB439D2C1BB4552E00E72CE8 /* donut.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB439D281BB4552A00E72CE8 /* donut.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EB439CFB1BB44D7A00E72CE8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = resources;
+			dstSubfolderSpec = 7;
 			files = (
+				EB439D2C1BB4552E00E72CE8 /* donut.jpg in CopyFiles */,
 				EB439D031BB44D7A00E72CE8 /* individual_project.1 in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -48,6 +50,10 @@
 		EB439D171BB44DCD00E72CE8 /* stbi_DDS_aug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_aug.h; sourceTree = "<group>"; };
 		EB439D181BB44DCD00E72CE8 /* stbi_DDS_aug_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_aug_c.h; sourceTree = "<group>"; };
 		EB439D191BB44DCD00E72CE8 /* test_SOIL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_SOIL.cpp; sourceTree = "<group>"; };
+		EB439D281BB4552A00E72CE8 /* donut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = donut.jpg; sourceTree = "<group>"; };
+		EB439D291BB4552A00E72CE8 /* earth.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = earth.bmp; sourceTree = "<group>"; };
+		EB439D2A1BB4552A00E72CE8 /* moon.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = moon.bmp; sourceTree = "<group>"; };
+		EB439D2B1BB4552A00E72CE8 /* sun.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = sun.bmp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 		EB439CF41BB44D7A00E72CE8 = {
 			isa = PBXGroup;
 			children = (
+				EB439D271BB4552A00E72CE8 /* resources */,
 				EB439D0B1BB44DCD00E72CE8 /* src */,
 				EB439D091BB44D8C00E72CE8 /* OpenGL.framework */,
 				EB439CFF1BB44D7A00E72CE8 /* individual_project */,
@@ -116,6 +123,18 @@
 				EB439D121BB44DCD00E72CE8 /* stb_image-1.16.c */,
 			);
 			path = original;
+			sourceTree = "<group>";
+		};
+		EB439D271BB4552A00E72CE8 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				EB439D281BB4552A00E72CE8 /* donut.jpg */,
+				EB439D291BB4552A00E72CE8 /* earth.bmp */,
+				EB439D2A1BB4552A00E72CE8 /* moon.bmp */,
+				EB439D2B1BB4552A00E72CE8 /* sun.bmp */,
+			);
+			name = resources;
+			path = ../resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
