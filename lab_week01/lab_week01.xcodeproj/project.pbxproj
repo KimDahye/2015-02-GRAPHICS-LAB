@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB0F090F1BB2A7700026D7CB /* pp4.c in Sources */ = {isa = PBXBuildFile; fileRef = EB0F090E1BB2A7700026D7CB /* pp4.c */; };
+		EB0F09151BB2CF450026D7CB /* pp5.c in Sources */ = {isa = PBXBuildFile; fileRef = EB0F09141BB2CF450026D7CB /* pp5.c */; };
 		EB245A731BB28A27001FCB5F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB8FBC851B945BEE007ED423 /* OpenGL.framework */; };
 		EB245AB51BB29048001FCB5F /* SOIL.h in Sources */ = {isa = PBXBuildFile; fileRef = EB245AAD1BB29032001FCB5F /* SOIL.h */; };
 		EB245AB61BB29073001FCB5F /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = EB245AA51BB29032001FCB5F /* image_DXT.c */; };
@@ -33,6 +33,7 @@
 /* Begin PBXFileReference section */
 		EB0F090C1BB2A4040026D7CB /* texture.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = texture.c; sourceTree = "<group>"; };
 		EB0F090E1BB2A7700026D7CB /* pp4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pp4.c; sourceTree = "<group>"; };
+		EB0F09141BB2CF450026D7CB /* pp5.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pp5.c; sourceTree = "<group>"; };
 		EB0FEC8D1BAAD72A000D940C /* gltools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gltools.h; path = ../../../../../../gltools.h; sourceTree = "<group>"; };
 		EB0FEC911BAAD8E1000D940C /* drawjet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = drawjet.c; sourceTree = "<group>"; };
 		EB0FEC971BAAE99F000D940C /* multiTexture.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = multiTexture.c; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 				EB0FEC971BAAE99F000D940C /* multiTexture.c */,
 				EBAB486F1BB17ABE008ACE93 /* pp3.c */,
 				EB0F090E1BB2A7700026D7CB /* pp4.c */,
+				EB0F09141BB2CF450026D7CB /* pp5.c */,
 			);
 			path = lab_week01;
 			sourceTree = "<group>";
@@ -196,7 +198,7 @@
 				EB245AB71BB2907A001FCB5F /* SOIL.c in Sources */,
 				EB245AB61BB29073001FCB5F /* image_DXT.c in Sources */,
 				EB245AB51BB29048001FCB5F /* SOIL.h in Sources */,
-				EB0F090F1BB2A7700026D7CB /* pp4.c in Sources */,
+				EB0F09151BB2CF450026D7CB /* pp5.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
